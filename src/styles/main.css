@@ -1,0 +1,360 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+  color: #283618;
+  font-weight: 500;
+  background-color: #fefae0;
+}
+
+a,
+input,
+button,
+textarea {
+  min-width: 44px;
+  min-height: 44px;
+}
+
+a {
+  color: inherit;
+  display: flex;
+  align-items: center;
+}
+
+a:visited {
+  color: inherit;
+}
+
+li {
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 900;
+}
+
+.hidden {
+  display: none;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+.flex {
+  display: flex;
+}
+
+.grow {
+  flex-grow: 1;
+}
+
+.shrink-0 {
+  flex-shrink: 0;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.gap {
+  gap: 1.25rem;
+}
+
+.navbar {
+  background-color: #fefae0;
+  position: sticky;
+  top: 0;
+  height: 5rem;
+  border-bottom: 2px solid #283618;
+  z-index: 10;
+}
+
+.navbar-brand {
+  font-family: 'Yeseva One', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.navbar-burger {
+  display: none;
+  border: 2px solid #283618;
+  cursor: pointer;
+  flex-direction: column;
+  padding: 10px;
+  justify-content: center;
+  background-color: #fefae0;
+}
+
+.navbar-burger > span {
+  width: 100%;
+  height: 2px;
+  background-color: #283618;
+  margin: 2px 0;
+}
+
+.navbar-link {
+  font-weight: 600;
+}
+
+.navbar::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+}
+
+.hero-container {
+  position: relative;
+  display: flex;
+  margin: 1.25rem 0;
+  border: 2px solid #283618;
+  height: 36rem;
+}
+
+.hero-caption {
+  position: absolute;
+  top: 50%;
+  left: 1.25rem;
+  right: 1.25rem;
+  transform: translateY(-50%);
+  width: 50%;
+  background-color: #fefae0bb;
+  backdrop-filter: blur(10px);
+  border: 2px solid #283618;
+  padding: 2rem;
+}
+
+.hero-caption-title {
+  margin-bottom: 1.25rem;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 2em;
+}
+
+.hero-caption-text {
+  font-size: 1.125em;
+  font-weight: 500;
+  margin-bottom: 1.25rem;
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.btn {
+  border: none;
+  padding: 0 1.75rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.relative {
+  position: relative;
+}
+
+.skip-button {
+  position: absolute;
+  top: 0;
+}
+
+.skip-button:focus {
+  display: block;
+}
+
+.btn:focus {
+  outline: 2px solid goldenrod;
+}
+
+.btn-primary {
+  background-color: #283618;
+  color: #fefae0 !important;
+}
+
+.btn-secondary {
+  background-color: #fefae0;
+  color: #283618;
+  border: 2px solid #283618;
+}
+
+.restaurant-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.25rem;
+}
+
+.restaurant-list > li {
+  list-style: none;
+}
+
+.mb {
+  margin-bottom: 1.25rem;
+}
+
+.restaurant-card {
+  background-color: #fefae0;
+  border: 2px solid #283618;
+}
+
+.restaurant-card-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-bottom: 2px solid #283618;
+}
+
+.restaurant-card-body {
+  padding: 1.25rem;
+  background-color: #fefae0;
+  color: #283618;
+}
+
+.restaurant-card-name {
+  margin-bottom: 0.25rem;
+}
+
+.restaurant-card-description {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+
+.restaurant-card-detail {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 1.25rem;
+}
+
+.restaurant-card-buttons {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+.section-list {
+  border-top: 2px dashed #28361850;
+  border-bottom: 2px dashed #28361850;
+  padding: 2.5rem 0;
+  /* scroll-snap-stop: normal; */
+}
+
+.scroll-margin {
+  scroll-margin-top: 80px;
+}
+
+.section-title {
+  margin-bottom: 0.25rem;
+}
+
+.section-text {
+  margin-bottom: 1.25rem;
+}
+
+.footer {
+  background-color: #283618;
+  color: #fefae0;
+  padding: 2.5rem 0;
+  font-weight: 400;
+}
+
+.footer-brand {
+  max-width: 30%;
+}
+
+.footer-title {
+  font-family: 'Yeseva One', sans-serif;
+  margin-bottom: 0.25rem;
+}
+
+.footer-details {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  gap: 1.25rem;
+}
+
+.footer-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.copyright {
+  background-color: #19220f;
+  color: #fefae0;
+  text-align: center;
+  padding: 1rem 0;
+  font-weight: 400;
+}
+
+@media (max-width: 768px) {
+  .navbar-menu {
+    display: none;
+  }
+
+  .navbar-menu.active {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 5rem;
+    left: 0;
+    width: 100%;
+    background-color: #283618ee;
+    backdrop-filter: blur(10px);
+    padding: 1.25rem;
+  }
+
+  .navbar-menu > .navbar-link {
+    color: #fefae0 !important;
+  }
+
+  .navbar-burger {
+    display: flex !important;
+  }
+
+  .hero-caption {
+    width: auto !important;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .footer-details {
+    width: 100%;
+  }
+
+  .hero-container {
+    height: calc(100vh - 12rem);
+  }
+}

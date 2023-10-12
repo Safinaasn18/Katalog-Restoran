@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#fefae0" />
+    <title>Restowan</title>
+    <link rel="manifest" href="./app.webmanifest" />
+    <link rel="icon" href="./favicon-16x16.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Yeseva+One&display=swap"
+      rel="preload"
+      as="style"
+    />
+    <link
+      rel="stylesheet"
+      media="print"
+      onload="this.onload=null;this.removeAttribute('media');"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Yeseva+One&display=swap"
+    />
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Yeseva+One&display=swap"
+      />
+    </noscript>
+  </head>
+  <body>
+    <main>
+      <header id="navbar" class="navbar flex items-center">
+        <div class="container">
+          <div class="flex items-center justify-between">
+            <a href="#" class="navbar-brand">Restowan</a>
+            <div class="navbar-menu flex gap">
+              <a href="/" class="navbar-link">Home</a>
+              <a href="#" class="navbar-link">Favorites</a>
+              <a href="https://github.com/Safinaasn18" class="navbar-link">About Us</a>
+            </div>
+            <button class="navbar-burger">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+          </div>
+        </div>
+      </header>
+      <section class="container">
+        <div id="skipContainer" class="hidden justify-center">
+          <a
+            id="skipButton"
+            class="btn btn-primary"
+            tabindex="1"
+            href="#listSection"
+          >
+            Skip to content
+          </a>
+        </div>
+        <div class="hero">
+          <div class="hero-container">
+            <div class="hero-caption">
+              <h1 class="hero-caption-title">Bingung Cari Restoran?</h1>
+              <p class="hero-caption-text">
+                Kami akan membantumu mencari restaurant terbaik untuk anda.
+              </p>
+              <button class="btn btn-primary">Mulai</button>
+            </div>
+            <img
+              srcset="
+                ./images/heros/hero-480.webp 3x,
+                ./images/heros/hero-720.webp 2x,
+                ./images/heros/hero-900.webp 1x
+              "
+              src="./images/heros/hero-480.webp"
+              alt="Hero Image"
+              class="hero-image"
+            />
+          </div>
+        </div>
+      </section>
+      <section id="listSection" class="scroll-margin section-list">
+        <div class="container">
+          <h2 class="section-title">Daftar Restoran</h2>
+          <p class="section-text">
+            Temukan restoran yang cocok dengan preferensi anda!
+          </p>
+          <ul id="restaurantList" class="restaurant-list"></ul>
+        </div>
+      </section>
+      <footer class="footer">
+        <div class="container">
+          <div class="footer-container flex justify-between">
+            <div class="footer-brand">
+              <h1 class="footer-title">Restowan</h1>
+              <p class="footer-text">Tujuan rekomendasi restoran anda</p>
+            </div>
+            <div class="footer-details">
+              <div>
+                <ul class="footer-list gap">
+                  <li>Home</li>
+                  <li>Favorites</li>
+                  <li>About Us</li>
+                </ul>
+              </div>
+              <div>
+                <div class="mb">Contact Us</div>
+                <ul class="footer-list gap">
+                  <li>+62 81225546944</li>
+                  <li>safinaasn18@gmail.com</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <div class="copyright">Copyright &copy; 2023 Restowan</div>
+    </main>
+  </body>
+</html>
